@@ -25,4 +25,4 @@ Next to the code for the preprocessing class that can be found in the `run_pipel
 3. run `poetry shell` to activate the virtual environment
 
 ## install en_core_web_sm (run after run poetry shell)
-1. run `python -m spacy download en_core_web_sm` to install the english language model for spacy
+1. run `python -m spacy download en_core_web_sm` to install the english language model for spacy :D
