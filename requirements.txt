@@ -1,4 +1,0 @@
-booknlp
-nltk
-pandas
-numpy

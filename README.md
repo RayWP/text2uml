@@ -19,10 +19,10 @@ Next to the code for the preprocessing class that can be found in the `run_pipel
 3. Open a terminal and run `python --version` to check if python is installed correctly
 4. run `pip --version` to check if pip is installed correctly
 
-## installing pipenv and create a virtual environment
-1. run `pip install pipenv` to install pipenv
-2. run `pipenv --version` to check if pipenv is installed correctly
-3. run `pipenv install` to install the dependencies (packages) from the Pipfile
-4. run `pipenv shell` to activate the virtual environment
+## installing poetry and creating a virtual environment
+1. run `pip install poetry` to install poetry
+2. run `poetry install`  to create a virtual environment and install the dependencies
+3. run `poetry shell` to activate the virtual environment
 
-
+## install en_core_web_sm (run after run poetry shell)
+1. run `python -m spacy download en_core_web_sm` to install the english language model for spacy

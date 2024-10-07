@@ -56,7 +56,7 @@ class Text2UML:
         # Initialize BookNLP
         booknlp = BookNLP('en', {
             'pipeline': 'entity,quote,supersense,event,coref',
-            'model': 'big',
+            'model': 'small',
         })
 
         # Process source text

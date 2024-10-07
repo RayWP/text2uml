@@ -2,6 +2,7 @@ import pickle
 import numpy as np
 import pandas as pd
 import json
+import os
 
 class Classifier:
     def __init__(self, tokens, retrieve_text):
@@ -9,13 +10,17 @@ class Classifier:
         self.retrieve_text = retrieve_text
         self.columns = ['word', 'lemma', 'POS_tag', 'fine_POS_tag', 'dependency_relation', 'event', 'supersense_category', 'entity', 'entity_type', 'entity_category', 'total_occurences', 'class_occurences', 'attribute_occurences']
 
-        with open('models/model.pkl', 'rb') as f:
+        model_path = os.path.abspath('./models/model.pkl')
+        fasttext_model_path = os.path.abspath('./models/fasttext-model.pkl')
+        gmm_data_path = os.path.abspath('./data/genmymodel/genmymodel_uml_extracted_metadata_final.json')
+
+        with open(model_path, 'rb') as f:
             self.crf = pickle.load(f)
-        
-        with open('models/fasttext-model.pkl', 'rb') as f:
+
+        with open(fasttext_model_path, 'rb') as f:
             self.fasttext = pickle.load(f)
-        
-        with open('../data/genmymodel/genmymodel_uml_extracted_metadata_final.json') as json_file:
+
+        with open(gmm_data_path) as json_file:
             gmm_data = json.load(json_file)
 
         # Store all classes and attributes independent of eachother
