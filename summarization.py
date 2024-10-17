@@ -1,12 +1,13 @@
 import numpy as np
 import pandas as pd
 
+
 class Summarizer:
     def __init__(self, tokens, entities, save_text):
         self.tokens = tokens
         self.entities = entities
         self.save_text = save_text
-    
+
     def get_main_entity(self, df):
         # Single-word entities
         if len(df) == 1:
@@ -20,7 +21,7 @@ class Summarizer:
             if list(range(token_positions[0], token_positions[-1] + 1)) == token_positions:
                 # One entity over multiple words
                 return df
-            else: 
+            else:
                 # One entity in multiple positions
                 # First: drop duplicates
                 filtered_entities = df.drop_duplicates('lemma')
@@ -38,7 +39,8 @@ class Summarizer:
                     if not np.isnan(last_token_id):
                         if current_token_id == last_token_id + 1:
                             # It belongs to the previous group
-                            grouped_entities[current_group] = grouped_entities[current_group].append(current_row, ignore_index=True)
+                            grouped_entities[current_group] = grouped_entities[current_group].append(current_row,
+                                                                                                     ignore_index=True)
                         else:
                             # It belongs to a new group
                             current_group += 1
@@ -51,14 +53,19 @@ class Summarizer:
                     i += 1
                     last_token_id = current_token_id
 
-                # Check which is the "main" entity
-                main_entity = list(filter(lambda x: ' '.join(x['word']) in self.entities.values(), grouped_entities))[0]
+                main_entity = None
+                for entity in grouped_entities:
+                    entity_words = ' '.join(entity['word'])
+                    if entity_words in self.entities.values():
+                        main_entity = entity
+                        break
 
                 return main_entity
-    
+
     def get_filtered_entities(self):
         # Define mask for specific types of entities that shouldn't be filtered
-        type_mask = ((self.tokens['entity_type'] != 'PRON') & (self.tokens['entity_category'] != 'ORG') & (self.tokens['entity_category'] != 'GPE'))
+        type_mask = ((self.tokens['entity_type'] != 'PRON') & (self.tokens['entity_category'] != 'ORG') & (
+                    self.tokens['entity_category'] != 'GPE'))
 
         # Remove organisations, these remain as full entity
         filtered_entities = list(self.tokens[(~self.tokens['entity'].isnull()) & (type_mask)].groupby('entity'))
@@ -72,23 +79,41 @@ class Summarizer:
             main_entity = self.get_main_entity(entity[1])
 
             # Only keep important POS tags
-            if len(main_entity) > 1:
-                main_entity = main_entity[(main_entity['POS_tag'] == 'NOUN') | (main_entity['POS_tag'] == 'ADJ') | (main_entity['POS_tag'] == 'PRP')]
+            try:
+                if main_entity is None:
+                    continue
+                elif len(main_entity) > 1:
+                    main_entity = main_entity[
+                        (main_entity['POS_tag'] == 'NOUN') |
+                        (main_entity['POS_tag'] == 'ADJ') |
+                        (main_entity['POS_tag'] == 'PRP')
+                        ]
+                elif len(main_entity) == 1:
+                    continue
+
+            except Exception as e:
+                print(f"An error occurred: {e}")
 
             # Add to final dictionary
             final_entities.setdefault(get_sentence(main_entity), []).append(entity[0])
-        
+
         return final_entities
-    
+
     def get_filtered_text(self, requested_entities):
         # Get all the correct entity numbers
         all_entities = self.get_filtered_entities()
-        selected_entities = [item for sublist in [all_entities[entity] for entity in requested_entities] for item in sublist]
+        selected_entities = []
 
-        filtered_sentences = list(filter(lambda df: any(df[1]['entity'].isin(selected_entities)), self.tokens.groupby('sentence_ID')))
+        for entity in requested_entities:
+            if entity in all_entities:
+                selected_entities.extend(all_entities[entity])
+            else:
+                print(f"Warning: Entity '{entity}' not found in all_entities")
+
+        filtered_sentences = list(
+            filter(lambda df: any(df[1]['entity'].isin(selected_entities)), self.tokens.groupby('sentence_ID')))
 
         # Save text for in later processes in the main class
         self.save_text(filtered_sentences)
 
         return list(map(lambda sentence: ' '.join(sentence[1]['word']), filtered_sentences))
-    

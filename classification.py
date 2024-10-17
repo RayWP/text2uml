@@ -51,29 +51,29 @@ class Classifier:
         }
         
         features.update({
-            'word.lower()': word.lower(),
-            'word.isupper()': word.isupper(),
-            'word.istitle()': word.istitle(),
-            'word.isdigit()': word.isdigit(),
-            'word[-3:]': word[-3:],
-            'word[-2:]': word[-2:],
-            'postag[:2]': postag[:2],
-            'postag[:2]': postag[:2],
-            'finepostag[:2]': fine_postag[:2],
-            'finepostag[:2]': fine_postag[:2],
+            # 'word.lower()': word.lower(),
+            # 'word.isupper()': word.isupper(),
+            # 'word.istitle()': word.istitle(),
+            # 'word.isdigit()': word.isdigit(),
+            # 'word[-3:]': word[-3:],
+            # 'word[-2:]': word[-2:],
+            # 'postag[:2]': postag[:2],
+            # 'postag[:2]': postag[:2],
+            # 'finepostag[:2]': fine_postag[:2],
+            # 'finepostag[:2]': fine_postag[:2],
         })
         if i > 0:
             word1 = sent[i-1][1]
             postag1 = sent[i-1][3]
             finepostag1 = sent[i-1][4]
             features.update({
-                '-1:word.lower()': word1.lower(),
-                '-1:word.istitle()': word1.istitle(),
-                '-1:word.isupper()': word1.isupper(),
-                '-1:postag': postag1,
-                '-1:postag[:2]': postag1[:2],
-                '-1:finepostag': finepostag1,
-                '-1:finepostag[:2]': finepostag1[:2],
+                # '-1:word.lower()': word1.lower(),
+                # '-1:word.istitle()': word1.istitle(),
+                # '-1:word.isupper()': word1.isupper(),
+                # '-1:postag': postag1,
+                # '-1:postag[:2]': postag1[:2],
+                # '-1:finepostag': finepostag1,
+                # '-1:finepostag[:2]': finepostag1[:2],
             })
         else:
             features['BOS'] = True
@@ -83,13 +83,13 @@ class Classifier:
             postag1 = sent[i+1][3]
             finepostag1 = sent[i-1][4]
             features.update({
-                '+1:word.lower()': word1.lower(),
-                '+1:word.istitle()': word1.istitle(),
-                '+1:word.isupper()': word1.isupper(),
-                '+1:postag': postag1,
-                '+1:postag[:2]': postag1[:2],
-                '+1:finepostag': finepostag1,
-                '+1:finepostag[:2]': finepostag1[:2],
+                # '+1:word.lower()': word1.lower(),
+                # '+1:word.istitle()': word1.istitle(),
+                # '+1:word.isupper()': word1.isupper(),
+                # '+1:postag': postag1,
+                # '+1:postag[:2]': postag1[:2],
+                # '+1:finepostag': finepostag1,
+                # '+1:finepostag[:2]': finepostag1[:2],
             })
         else:
             features['EOS'] = True
