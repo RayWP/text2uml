@@ -11,7 +11,7 @@ Next to the code for the preprocessing class that can be found in the `run_pipel
 3. [Our version of the Lindholmen dataset](https://github.com/MeMartijn/text2uml/blob/main/data/lindholmen/uml_extracted_metadata_annotated.json) contains a cleaned and preprocessed overview of all classes and attributes of the [Lindholmen dataset by Chaudron et al. (2017)](https://research.tue.nl/nl/datasets/lindholmen-dataset-of-uml-models).
 4. To combat the development focus of the Lindholmen dataset, this repository contains a similar [dataset](https://github.com/MeMartijn/text2uml/blob/main/data/genmymodel/genmymodel_uml_extracted_metadata_final.json) of files with their (cleaned and normalised) classes and attributes that we extracted from the [MAR search engine by Lopez et al. (2020)](https://dl.acm.org/doi/10.1145/3365438.3410947). 
 
-# Runing guide, extended by: github.com/rwp1byte
+# Running guide, extended by: github.com/rwp1byte
 
 ## installing python
 1. Download and install python from [python.org](https://www.python.org/downloads/)
@@ -26,3 +26,6 @@ Next to the code for the preprocessing class that can be found in the `run_pipel
 
 ## install en_core_web_sm (run after run poetry shell)
 1. run `python -m spacy download en_core_web_sm` to install the english language model for spacy :D
+
+## running the original code by text2uml
+1. run `python run_pipeline.py` to run the original code by text2uml or check "Full pipeline.ipynb" for a more detailed guide
