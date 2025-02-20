@@ -1,9 +1,10 @@
 ,Sentence,Result
-0,"Analyst : Do you run into any challenges with international addresses , given the wide variation in address formats ?","After analyzing the sentence: ""Do you run into any challenges with international addresses , given the wide variation in address formats ?"", I would classify it as:
+0,"Analyst : Do you run into any challenges with international addresses , given the wide variation in address formats ?","To classify the given sentence: ""Do you run into any challenges with international addresses , given the wide variation in address formats ?"", let's analyze its utility for each type of diagram:
 
-[Useful Class, Not Useful Use Case, Not Useful Activity]
+- **Useful for Class Diagram**: This sentence implies the need to represent various address formats and potentially their validation or processing, which could be part of a class structure. Therefore, it is **Useful for Class Diagram**.
 
-Reasoning:
-- It is useful for Class Diagram because the concept of international addresses and their variations can be modeled as classes or attributes within a class.
-- It is not useful for Use Case Diagram because this sentence does not describe an interaction between actors or systems that would typically be represented in a use case scenario.
-- It is not useful for Activity Diagram because the sentence doesn't imply a sequence of activities or actions that would be depicted in an activity diagram."
+- **Useful for Use Case Diagram**: The scenario described involves interacting with an external system or process (address handling), which fits well into the context of use cases that describe how users interact with a system to achieve a goal. Hence, it's **Useful for Use Case Diagram**.
+
+- **Not Useful for Activity Diagram**: While this sentence does hint at a potential process (handling address formats), it doesn't explicitly outline steps or actions in a sequence that would be typically detailed in an activity diagram. Thus, it is **Not Useful for Activity Diagram**.
+
+So, the classification for the given sentence would be: **[Useful Class, Useful Use Case, Not Useful Activity]**."

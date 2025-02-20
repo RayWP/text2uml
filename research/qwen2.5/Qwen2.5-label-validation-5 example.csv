@@ -1,0 +1,4 @@
+,Sentence,Result
+0,"Analyst : Do you run into any challenges with international addresses , given the wide variation in address formats ?","Verdict: Not Useful for Class Diagram, Useful for Use Case Diagram, Not Useful for Activity Diagram
+
+This sentence is more about identifying a potential challenge or requirement within a system (Use Case) rather than detailing the structure of classes or the flow of activities."
