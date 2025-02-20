@@ -1,0 +1,9 @@
+,Sentence,Result
+0,"Analyst : Do you run into any challenges with international addresses , given the wide variation in address formats ?","After analyzing the sentence: ""Do you run into any challenges with international addresses , given the wide variation in address formats ?"", I would classify it as:
+
+[Useful Class, Not Useful Use Case, Not Useful Activity]
+
+Reasoning:
+- It is useful for Class Diagram because the concept of international addresses and their variations can be modeled as classes or attributes within a class.
+- It is not useful for Use Case Diagram because this sentence does not describe an interaction between actors or systems that would typically be represented in a use case scenario.
+- It is not useful for Activity Diagram because the sentence doesn't imply a sequence of activities or actions that would be depicted in an activity diagram."
