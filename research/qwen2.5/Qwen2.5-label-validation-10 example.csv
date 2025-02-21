@@ -258,3 +258,215 @@ Explanation:
 70,"Each menu item is classified by Romano 's as "" appetizer "" , "" entree "" , "" dessert "" or "" beverage "" .","Verdict: Useful for Class Diagram, Not Useful for Use Case Diagram, Not Useful for Activity Diagram
 
 This sentence describes the classification of menu items which is more related to defining classes and their attributes in a class diagram rather than describing use cases or activities."
+71,The price of each menu item can vary based on the time of day .,"Verdict: Not Useful for Class Diagram, Useful for Use Case Diagram, Not Useful for Activity Diagram
+
+Explanation:
+- This sentence describes a rule or condition that affects how an application or system functions but doesn't describe relationships between classes (entities) well enough to be useful in creating a class diagram.
+- It suggests a requirement or feature of the system which could be relevant in use case diagrams where you would depict conditions and rules under which certain functionalities operate.
+- The sentence does not provide detailed steps or flow that are necessary for activity diagrams."
+72,"For example , some of the menu items have different lunch and dinner prices .","[Useful Class, Useful Use Case, Not Useful Activity]"
+73,Some of the menu items change prices for happy hour .,"Verdict: Useful for Class Diagram (to represent entities such as MenuItems and HappyHourPrices), Useful for Use Case Diagram (use case for ""Change Item Prices During Happy Hour""), Not Useful for Activity Diagram (since it does not describe a sequence of actions)  
+
+Example Output Format:
+[Useful for Class Diagram, Useful for Use Case Diagram, Not Useful for Activity Diagram]"
+74,"In order to calculate the check at the end of the dinner , the waiter maintains a list , by reservation number , of the menu items ordered and the time that the menu item was ordered .","[Useful for Class Diagram, Useful for Use Case Diagram, Not Useful for Activity Diagram]"
+75,"In other words , each reservation can be associated with many menu items and a menu item can be associated with many reservations .","[Useful Class, Not Useful Use Case, Not Useful Activity]"
+76,"In addition to menu items , Romano 's maintains a list of the food items that are utilized by the restaurant such as chicken , mushrooms , bread sticks , red sauce , cream sauce , etc .","[Useful Class, Not Useful Use Case, Not Useful Activity]"
+77,Food items are utilized in the preparation of menu items .,"[Useful Class, Not Useful Use Case, Useful Activity]"
+78,Each food item is identified by a unique food item number .,"Verdict: Useful for Class Diagram, Not Useful for Use Case Diagram, Not Useful for Activity Diagram
+
+Explanation:
+- This sentence indicates the existence of an entity (food item) with a unique attribute (food item number), which is useful information to create a class diagram.
+- It does not describe any use case or interaction between actors and systems, so it's not useful for a Use Case Diagram.
+- The statement doesn't outline any specific process flow or activities, making it irrelevant for an Activity Diagram."
+79,The Right - Way Rental Truck Company rents small moving trucks and trailers for local and one - way usage .,"[Useful Class, Useful Use Case, Not Useful Activity]"
+80,We have 347 rental offices across the western United States .,"Verdict: Not Useful for Class Diagram, Not Useful for Use Case Diagram, Not Useful for Activity Diagram
+
+This sentence provides general information about the number of rental offices but does not describe any specific relationships between classes, use cases, or activities that would be relevant to creating a class diagram, use case diagram, or activity diagram."
+81,"Our rental stock includes a total of 5,78 vehicles including various types of trucks and trailers .","Verdict: Useful for Class Diagram, Useful for Use Case Diagram, Not Useful for Activity Diagram
+
+Explanation:
+- The sentence provides information about the entities (vehicles) and their attributes (types like trucks and trailers), which can be useful in defining classes within a class diagram.
+- It also describes an aspect of the system's behavior or requirements concerning vehicle rentals, making it relevant to use case diagrams.
+- However, this information is not detailed enough for creating specific steps or workflows that would be necessary for an activity diagram."
+82,We need to implement a system to track our rental agreements and our vehicle assignments .,"[Useful Class, Useful Use Case, Not Useful Activity]"
+83,Each rental office rents vehicles that they have in stock to customers ready to take possession of the vehicle .,"[Useful for Class Diagram, Useful for Use Case Diagram, Not Useful for Activity Diagram]"
+84,"We do n’t take reservations , or speculate on when the customer will return rented vehicles .","Verdict: Useful for Class Diagram, Useful for Use Case Diagram, Not Useful for Activity Diagram
+
+Explanation:
+- **Class Diagram**: This sentence can help define the relationship between the system (rental service) and the entities involved (customers), indicating attributes such as whether reservations are taken or not.
+- **Use Case Diagram**: It specifies a business rule about customer interactions with the rental service, which is useful for understanding use cases like vehicle return processes.
+- **Activity Diagram**: The sentence does not describe any specific activities or workflows that would be relevant to an activity diagram."
+85,"The central office oversees the vehicle distribution , and directs transfers of vehicles from one rental office to another .","[Useful Class, Useful Use Case, Not Useful Activity]"
+86,Each rental office has an office name like “ Littleton Right - Way ” .,"Verdict: Useful for Class Diagram, Not Useful for Use Case Diagram, Not Useful for Activity Diagram
+
+Explanation:
+- This sentence describes a property of the Rental Office class (having an office name), making it useful for defining attributes in a Class Diagram.
+- It does not describe any user interaction or use case scenario, so it is not useful for a Use Case Diagram.
+- The statement does not detail any specific sequence of activities or actions, so it is not relevant to an Activity Diagram."
+87,Each office also has a unique three digit office number .,"Verdict: Useful for Class Diagram, Not Useful for Use Case Diagram, Not Useful for Activity Diagram
+
+This sentence describes a characteristic of an ""office"" which would be relevant to defining its attributes in a class diagram but does not provide information suitable for use case or activity diagrams."
+88,We also keep each office ’s address .,"Verdict: Useful for Class Diagram, Not Useful for Use Case Diagram, Not Useful for Activity Diagram
+
+This sentence is useful for a Class Diagram as it indicates the existence of an ""Office"" class with an associated attribute ""address"". It does not provide enough information to be useful for a Use Case or an Activity Diagram."
+89,"Each office is a home office for some of our vehicles , and each vehicle is based out of a single home office .","[Useful Class, Not Useful Use Case, Not Useful Activity]"
+90,"Each vehicle has a vehicle i d , state of registration , and a license plate registration number .","Verdict: Useful for Class Diagram, Not Useful for Use Case Diagram, Not Useful for Activity Diagram
+
+This sentence is useful for creating attributes in a class diagram as it describes the properties (attributes) that each Vehicle object has. It does not provide information relevant to use case or activity diagrams which generally focus on actions and interactions rather than data properties of objects."
+91,"We have five different types of vehicles : 36 trucks , 24 ’ trucks , 10 ’ trucks , 8 ’ covered trailers , and 6 ’ open trailers .","Verdict: Useful for Class Diagram, Not Useful for Use Case Diagram, Not Useful for Activity Diagram
+
+This sentence is useful for creating a class diagram as it provides information about different types of vehicles that can be represented as classes. It does not provide any specific use case or describe an activity flow, so it's not useful for those diagrams."
+92,"Yes , we do have a vehicle type code .","Verdict: Useful for Class Diagram, Not Useful for Use Case Diagram, Not Useful for Activity Diagram
+
+Explanation:
+- **Class Diagram**: This sentence indicates the existence of a ""vehicle type"" entity or attribute which can be represented as a class or an attribute in a class diagram.
+- **Use Case Diagram**: There is no indication of any interaction with actors or use cases.
+- **Activity Diagram**: The sentence does not describe a sequence of actions or activities."
+93,"For all our vehicles , we need to track the last maintenance date , and expiration date of its registration .","[Useful Class, Useful Use Case, Not Useful Activity]"
+94,"For our trucks , we need to know the current odometer reading , the gas tank capacity , and whether or not it has a working radio .","[Useful for Class Diagram, Not Useful for Use Case Diagram, Not Useful for Activity Diagram]"
+95,"For long moves , customers really prefer a radio .","Verdict: Not Useful for Class Diagram, Useful for Use Case Diagram, Not Useful for Activity Diagram
+
+Explanation:
+- The sentence describes a preference of customers during long moves, which can be relevant to understanding the requirements or expectations from the system (Use Case Diagram).
+- It does not describe relationships between entities that would be necessary for a class diagram.
+- It also doesn't detail any specific step-by-step process that would be useful for an activity diagram."
+96,"We log the current mileage just before we rent a truck , and then again when it is returned .","[Useful Class, Useful Use Case, Not Useful Activity] 
+
+Explanation:
+- **Class Diagram**: This sentence describes an attribute (current mileage) of an entity (truck rental), which can be useful for defining the class Truck or Rental in a class diagram.
+- **Use Case Diagram**: The action of logging mileage before and after renting a truck is an interaction with the system that can be part of use cases related to truck rentals.
+- **Activity Diagram**: While it describes actions, it lacks detail on how these activities flow from one state to another or involve decision points necessary for an activity diagram."
+97,"Most of our rental agreements are for individual customers , but a rental agreement can either be for an individual or for a company .","[Useful Class, Useful Use Case, Not Useful Activity]"
+98,We do rent a small percentage of our trucks to companies .,"[Useful for Class Diagram, Useful for Use Case Diagram, Not Useful for Activity Diagram]"
+99,We assign each company an identifying company number and track the company ’s name and address .,"[Useful Class, Not Useful Use Case, Not Useful Activity]"
+100,"No , we do n’t need to worry about any additional information about a company .","Verdict: Not Useful for Class Diagram, Not Useful for Use Case Diagram, Not Useful for Activity Diagram"
+101,Our corporate sales group handles all that information separately .,"Verdict: Useful for Class Diagram, Useful for Use Case Diagram, Not Useful for Activity Diagram
+
+Explanation:
+- **Class Diagram**: This sentence could indicate the existence of a ""CorporateSalesGroup"" class and its responsibility to handle certain types of information.
+- **Use Case Diagram**: The statement can suggest an actor (e.g., Corporate Sales Group) that performs actions related to handling specific business information, which is useful in defining use cases and their relationships with actors and other system components.
+- **Activity Diagram**: This sentence doesn't provide enough detail about the flow of activities or steps involved in processing information. Therefore, it's not particularly useful for an activity diagram."
+102,"For each individual customer , we record the customer ’s name , home phone , address , and driver ’s license state , number , and expiration date .","[Useful for Class Diagram, Not Useful for Use Case Diagram, Not Useful for Activity Diagram]"
+103,We like to keep track of all our customers .,"[Useful Class, Useful Use Case, Not Useful Activity]"
+104,"If a customer damaged a vehicle , abandoned it , or did n’t fully pay the bill , then we tag the customer as a poor risk , and wo n’t rent to that customer again .","[Useful for Class Diagram, Useful for Use Case Diagram, Not Useful for Activity Diagram]"
+105,"We only allow a single individual or company for a given rental agreement , and we write a separate rental agreement for each vehicle .","[Useful Class, Useful Use Case, Not Useful Activity]"
+106,"Yes , we do have customers rent two or more vehicles at the same time .","[Useful for Class Diagram, Useful for Use Case Diagram, Not Useful for Activity Diagram]"
+107,Each rental agreement is identified by the originating rental office number and a rental agreement number .,"[Useful Class, Not Useful Use Case, Not Useful Activity]"
+108,"We also need to track the rental date , the anticipated duration of the rental , the originating rental office , the drop - off rental office , the amount of the deposit paid , the quoted daily rental rate , and the quoted rate per mile .","[Useful Class, Useful Use Case, Not Useful Activity]"
+109,"Of course for the trailers , there is n’t a mileage charge .","Verdict: Useful for Class Diagram, Useful for Use Case Diagram, Not Useful for Activity Diagram
+
+This sentence describes an attribute of trailers (no mileage charge) which can be useful in identifying attributes and relationships between classes or use cases related to vehicle rentals. However, it does not provide the kind of procedural information necessary for creating an activity diagram."
+110,"No , we do n’t need to automate the financial side of our business , just our rental agreement tracking and vehicle assignment functions .","Verdict: Useful for Class Diagram, Useful for Use Case Diagram, Not Useful for Activity Diagram
+
+Explanation:
+- **Useful for Class Diagram**: The sentence indicates specific entities (rental agreements, vehicles) and functionalities that need to be tracked or assigned. These can be represented as classes in a class diagram.
+- **Useful for Use Case Diagram**: The sentence suggests key processes related to the rental business functions which could define use cases in a use case diagram.
+- **Not Useful for Activity Diagram**: While it outlines what needs to be automated, it does not describe specific steps or flows that would be necessary for an activity diagram."
+111,"Geological samples are retrieved from the field and then processed in the laboratory to determine various properties , including chemistry , mineralogy , age , and petrophysical properties like density , porosity , permeability .","[Useful for Class Diagram, Not Useful for Use Case Diagram, Useful for Activity Diagram]"
+112,"Samples obtained as part of economic activities , such as mineral exploration , are usually processed in commercial assay and chemistry labs .","Verdict: Useful for Class Diagram, Not Useful for Use Case Diagram, Useful for Activity Diagram
+
+Explanation:
+- **Class Diagram**: This sentence can be used to identify entities (such as ""samples"", ""labs"", ""activities"") and their relationships (processing of samples in labs).
+- **Use Case Diagram**: The sentence does not describe a user interaction or a specific use case scenario.
+- **Activity Diagram**: It describes the processing workflow of samples, which is relevant for an activity diagram."
+113,"For QA / QC purposes , each batch of samples will have a number of control samples inserted , for which the concentration of particular chemical species are already known .","Verdict: Useful for Class Diagram, Not Useful for Use Case Diagram, Useful for Activity Diagram"
+114,"For confidentiality reasons the location information associated with each sample is not provided to the lab , but must be re - attached during the interpretation phase .","Verdict: Useful for Class Diagram, Not Useful for Use Case Diagram, Useful for Activity Diagram
+
+Explanation:
+- **Class Diagram**: This sentence describes relationships and constraints between entities like ""samples,"" ""location information,"" and ""labs."" It could help in identifying classes such as Sample, LocationInformation, Lab, etc., along with their attributes and associations.
+- **Use Case Diagram**: The sentence does not describe an interaction or user goal that would be directly mapped to a use case scenario involving actors and systems.
+- **Activity Diagram**: This sentence describes a process flow where information is handled in specific phases (confidentiality phase without location info, re-attachment during interpretation), which can be modeled as steps in an activity diagram."
+115,"During processing , many derived samples will be generated by various physical and chemical procedures .","Verdict: Useful for Class Diagram, Not Useful for Use Case Diagram, Useful for Activity Diagram"
+116,"In some cases the derived samples are strict sub - samples , whose intensive properties are intended to be the same as the parent .","Verdict: Useful for Class Diagram, Not Useful for Use Case Diagram, Useful for Activity Diagram
+
+Explanation:
+- **Class Diagram**: This sentence describes relationships and constraints between different types of entities (samples), which can help define classes and their attributes in a class diagram.
+- **Use Case Diagram**: The sentence does not describe any user interactions or system functionalities that would be relevant to use cases.
+- **Activity Diagram**: The description of how derived samples are related to parent samples can provide insight into the process flow, making it useful for an activity diagram."
+117,"In other cases , the split is ' biased ' , with the derived sample intended to select a specific sub - sample , defined by a particular particle size , density , magnetic properties , etc .","Verdict: Useful for Class Diagram, Useful for Use Case Diagram, Useful for Activity Diagram
+
+Explanation:
+- **Useful for Class Diagram**: This sentence describes how samples can be categorized or classified based on specific attributes (particle size, density, magnetic properties), which is relevant to defining classes and their attributes in a class diagram.
+- **Useful for Use Case Diagram**: The process of splitting samples with certain biases could represent a use case where users interact with the system to manage these processes.
+- **Useful for Activity Diagram**: It outlines an activity (splitting samples based on specific criteria), which can be visualized as steps in an activity diagram."
+118,"The link from the derived sample to the parent sample must be preserved , and the link from the parent to the location from which it was obtained also .","Verdict: Useful for Class Diagram, Not Useful for Use Case Diagram, Not Useful for Activity Diagram
+
+This sentence indicates relationships between different entities (samples and locations) that need to be preserved. It is more relevant for defining how classes are related to each other in a class diagram rather than describing use cases or activities."
+119,"In some cases the location is associated with another sampling artifact , such as a drill - hole or traverse or cruise , with the latter carrying the detailed location information .","Verdict: Useful for Class Diagram, Not Useful for Use Case Diagram, Useful for Activity Diagram"
+120,"In a research context some samples have a particularly high - value , having been obtained by an expensive process ( involving drilling or ships or spacecraft ) or from a location that is hard to visit ( remote , offshore , in space ) .","Verdict: Useful for Class Diagram, Not Useful for Use Case Diagram, Useful for Activity Diagram
+
+Explanation:
+- **Useful for Class Diagram**: The sentence describes characteristics of samples and their value in the context of research. This can help define classes such as ""Sample"", ""ResearchContext"", etc., along with attributes like ""value"" and relationships with other entities.
+- **Not Useful for Use Case Diagram**: It does not describe a specific interaction or scenario between actors and systems, which is required for a use case diagram.
+- **Useful for Activity Diagram**: The sentence can help identify activities such as obtaining high-value samples through expensive processes (e.g., drilling, space missions) and the subsequent handling of these samples in research contexts."
+121,These samples are sometimes sub - divided and distributed to multiple research teams or labs for different specialized observations .,"Verdict: Not Useful for Class Diagram, Useful for Use Case Diagram, Useful for Activity Diagram"
+122,"Each lab will run its own LIMS system , which will usually assign a local identifier for the sample .","Verdict: Useful for Class Diagram, Not Useful for Use Case Diagram, Not Useful for Activity Diagram
+
+Explanation:
+- **Useful for Class Diagram**: This sentence describes relationships and attributes related to entities such as labs, LIMS systems, and samples, which are essential elements in a class diagram.
+- **Not Useful for Use Case Diagram**: The sentence does not describe any interactions between actors and use cases that would be relevant for a use case diagram.
+- **Not Useful for Activity Diagram**: It does not describe the flow of activities or processes that would be suitable for an activity diagram."
+123,"When the results of these observations are reported , it is necessary that observations from different labs can be correlated with each other , so that the complete picture around each sample can be assembled .","Verdict: Not Useful for Class Diagram, Useful for Use Case Diagram, Useful for Activity Diagram"
+124,"These stories focus on sensing applications involving ex - situ sampling , where a location is visited and a specimen obtained using some sampling process , then transported to one or more laboratories where it is processed into one or more sub - samples and various observations made .","Verdict: Useful for Class Diagram, Not Useful for Use Case Diagram, Useful for Activity Diagram
+
+This sentence describes the flow of processes involved in ex-situ sampling applications, including sensing, specimen collection, transportation, processing, and observation. It provides a broad overview that is more suited to defining activities (how tasks are performed) rather than specific use cases or class relationships alone. However, it can also help identify different classes such as ""Sampling Process,"" ""Specimen,"" ""Laboratory,"" etc., which makes it useful for a Class Diagram."
+125,"Sample identity is usually key , and the relationships between samples , between samples and other artifacts of the sampling process , and also with other geographic features or locations .","Verdict: Useful for Class Diagram, Not Useful for Use Case Diagram, Not Useful for Activity Diagram
+
+Explanation:
+- **Useful for Class Diagram**: This sentence describes relationships and associations between various entities (samples, artifacts, geographic features), which can be represented as classes with attributes and relationships.
+- **Not Useful for Use Case Diagram**: The sentence does not describe user interactions or system functionalities that would be relevant to a use case diagram.
+- **Not Useful for Activity Diagram**: This sentence is more about static relationships rather than the flow of actions, making it less suitable for an activity diagram."
+126,The sampling time and analysis and reporting time are all different .,"Verdict: Useful for Class Diagram, Not Useful for Use Case Diagram, Useful for Activity Diagram
+
+Explanation:
+- **Class Diagram**: This sentence can be useful in a class diagram because it implies relationships between entities such as ""Sampling,"" ""Analysis,"" and ""Reporting"" which may have distinct attributes and behaviors.
+- **Use Case Diagram**: The sentence does not describe user interactions or use cases directly, so it is less relevant for this type of diagram.
+- **Activity Diagram**: This sentence can be useful in an activity diagram to illustrate the different stages (sampling time, analysis time, reporting time) as separate activities with distinct start and end points."
+127,"Similar process apply to botanical sampling , and to environmental sampling ( water , air , dust ) .","Verdict: Useful for Class Diagram, Not Useful for Use Case Diagram, Useful for Activity Diagram
+
+Explanation:
+- **Useful for Class Diagram**: The sentence describes different types of samples which can be modeled as classes in a class diagram.
+- **Not Useful for Use Case Diagram**: It does not describe user interactions or scenarios that are typical for use case diagrams.
+- **Useful for Activity Diagram**: The process described (sampling, processing) can be represented step-by-step in an activity diagram."
+128,"The clinic basically schedules patients , provides services for them , and bills them for those services .","[Useful Class, Useful Use Case, Not Useful Activity]"
+129,"New patients fill out a form listing their name , address , telephone numbers , allergies , and state of mind prior to scheduling their first appointment .","[Useful for Class Diagram, Useful for Use Case Diagram, Not Useful for Activity Diagram]"
+130,Existing patients are normally scheduled for their next appointment as they depart from their current appointment .,"[Useful for Class Diagram, Useful for Use Case Diagram, Not Useful for Activity Diagram]"
+131,"When the office staff forget to do this , a desk worker has to call the patient to set up a date .","[Useful for Class Diagram, Useful for Use Case Diagram, Not Useful for Activity Diagram]"
+132,Schedules are entered into a central appointment book ; patient records ( including contact information ) are kept in paper files .,"Verdict: Useful for Class Diagram, Not Useful for Use Case Diagram, Not Useful for Activity Diagram
+
+Explanation:
+- **Class Diagram**: This sentence is useful because it describes the existence of entities like ""schedules,"" ""appointment book,"" and ""patient records"" along with their attributes (e.g., patient records include contact information). It provides details about how these elements are organized in a system, which can be used to create class diagrams.
+- **Use Case Diagram**: The sentence does not describe interactions or scenarios that involve actors using the system, so it is not particularly useful for use case diagrams.
+- **Activity Diagram**: This sentence focuses more on data management and organization rather than specific actions or workflows, making it less suitable for an activity diagram."
+133,"Appointments are for one of three procedures : dental hygiene , cavities and fillings , and oral surgery ( including root canals and tooth extractions ) .","Verdict: Useful for Class Diagram, Not Useful for Use Case Diagram, Not Useful for Activity Diagram
+
+Explanation:
+- **Useful for Class Diagram**: This sentence describes the different types of procedures that appointments can involve. It suggests relationships between entities like ""Appointment"" and specific procedure classes such as ""Dental Hygiene,"" ""Cavities and Fillings,"" and ""Oral Surgery."" These could be represented in a class diagram to show how an appointment might have attributes or associations with these procedure types.
+- **Not Useful for Use Case Diagram**: While the sentence provides information about what appointments can involve, it does not describe any user interactions or use cases (e.g., scheduling an appointment). It is more focused on categorizing the nature of appointments rather than describing actions performed by users.
+- **Not Useful for Activity Diagram**: An activity diagram focuses on workflows and sequences of activities. This sentence does not provide information about a sequence of steps or processes involved in making or handling an appointment, so it doesn't fit well with an activity diagram."
+134,"For each procedure the patient needs to be prepared and supplies need to be collected ( e.g. , probes , drill bits , cements , resins , etc . ) .","[Useful Class, Not Useful Use Case, Useful Activity]"
+135,"For a hygienist 's appointment , preparation could be as simple as seating the patient in dental chair and putting a bib around his or her neck .","Not Useful for Class Diagram, Not Useful for Use Case Diagram, Useful for Activity Diagram"
+136,"For oral surgery , anesthesia of various strengths are normally administered prior to operation .","[Useful Class, Not Useful Use Case, Useful Activity]"
+137,Only for oral surgery procedures is it necessary to ask the patient to wait for up to twenty minutes before performing a post - operative check .,"Verdict: Not Useful for Class Diagram, Useful for Use Case Diagram, Useful for Activity Diagram"
+138,"Billing is always done by the month , and bills are always sent by mail to patients ' contact addresses .","[Useful Class, Useful Use Case, Not Useful Activity]"
+139,Checks are received by mail .,"[Not Useful, Useful, Not Useful]
+
+This sentence is more about describing a process or action (receiving checks via mail) rather than defining entities and their relationships for a class diagram or detailing the steps of an activity in an activity diagram. It can be relevant to a use case diagram as it describes an interaction involving actors (e.g., customers sending checks) and systems (the system receiving and processing the checks)."
+140,HMO - funded patients are asked to make a copayment at the time that they leave the office .,"Verdict: Useful for Class Diagram, Useful for Use Case Diagram, Not Useful for Activity Diagram
+
+Explanation:
+- **Class Diagram**: This sentence can help define relationships and attributes between classes like ""Patient"" and ""Payment.""
+- **Use Case Diagram**: It describes an interaction where a patient makes a copayment upon leaving the office, which is relevant to defining use cases involving financial transactions.
+- **Activity Diagram**: While it mentions an action (making a payment), it does not provide enough detail on how this activity flows or interacts with other activities."
+141,Each patient also generates a reimbursement request to an insurance company .,"[Useful Class, Useful Use Case, Not Useful Activity]"
+142,Insurance companies and HMOs send their checks by mail three months after receiving a reimbursement request .,"[Useful Class, Useful Use Case, Not Useful Activity]"
+143,The clinic maintains a supplies inventory file that a worker fills out once a week by physically inspecting each of the three procedures rooms .,"Verdict: Useful for Class Diagram, Useful for Use Case Diagram, Useful for Activity Diagram
+
+Explanation:
+- **Class Diagram**: This sentence suggests entities such as ""clinic,"" ""worker,"" and ""supplies inventory file"" which can be represented in a class diagram.
+- **Use Case Diagram**: The process of maintaining an inventory by inspecting procedure rooms can be modeled as a use case involving the actor (e.g., worker) and the system (e.g., clinic).
+- **Activity Diagram**: The weekly inspection process described can be broken down into steps that are suitable for an activity diagram, detailing how the worker interacts with the supplies and updates the inventory."
+144,Supplies and tools are stored in a standard layout in each room .,"Not Useful for Class Diagram, Not Useful for Use Case Diagram, Not Useful for Activity Diagram
+
+The sentence describes the storage of supplies and tools but does not provide specific information that would be useful for defining classes, use cases, or detailed activities in a system's design. It is more about physical layout and less about interactions or processes that are typically modeled with UML diagrams."

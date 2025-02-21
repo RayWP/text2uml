@@ -351,3 +351,261 @@ My classification is:
 
 Explanation: This sentence is not describing the behavior or interactions of objects or classes within a system. It's more about the requirements or needs of a process or scenario, which makes it useful for a Use Case Diagram. In a Use Case Diagram, this would represent a specific use case (e.g., ""Review case documents"") and its associated actors (who are using the document)."
 40,Romano 's is the finest Italian restaurant in the city .,"[Not Useful Class Diagram, Not Useful Use Case Diagram, Not Useful Activity Diagram]"
+41,Unless you are a celebrity or a good friend of Romano you will need a reservation .,"[Not Useful for Class Diagram, Useful for Use Case Diagram, Not Useful for Activity Diagram]"
+42,"A reservation is made for a specific time , date and number of people .","[Not Useful Class Diagram, Useful Use Case, Not Useful Activity]"
+43,The reservation also captures the name and phone number of the person making the reservation .,"Verdict: 
+[Not Useful Class Diagram, Useful Use Case Diagram, Not Useful Activity Diagram]"
+44,Each reservation is assigned a unique reservation number .,"[Not Useful Class, Not Useful Use Case, Useful Activity]"
+45,There are two categories of reservations at Romano 's : individual reservations and banquet reservations .,"Verdict: 
+
+[Useful Class Diagram, Useful Use Case Diagram, Not Useful Activity Diagram]"
+46,Additional reservation information captured when an individual makes a reservation includes seating preference ( inside or patio ) and smoking preference ( smoking or nonsmoking ) .,"Verdict: 
+[Not Useful Class Diagram, Useful Use Case Diagram, Not Useful Activity Diagram]"
+47,Additional reservation information captured for banquet reservations includes the group name and the method of payment .,"Verdict: [Not Useful Class, Useful Use Case, Not Useful Activity]"
+48,Seating at Romano 's is limited .,"[Not Useful Class Diagram, Useful Use Case, Not Useful Activity]"
+49,Romano 's has a fixed number of tables .,"[Not Useful Class, Not Useful Use Case, Not Useful Activity]"
+50,Each table is identified by a unique table number .,"Verdict: Useful for Class Diagram, Not Useful for Use Case Diagram, Not Useful for Activity Diagram"
+51,"Each of the tables is further described by a unique free form description such as "" located by the North window "" , "" located in front of the fountain "" , "" by the kitchen door "" .","Based on the additional information provided, I would classify the sentence ""Each of the tables is further described by a unique free form description such as 'located by the North window', 'located in front of the fountain', 'by the kitchen door'."" as:
+
+Not Useful for Class Diagram, Not Useful for Use Case Diagram, Useful for Activity Diagram
+
+Explanation:
+- The sentence describes the characteristics or attributes of tables (e.g., location), which is more relevant to a Class Diagram. However, since it's describing attributes rather than behaviors or interactions between classes, it's not directly useful for a Class Diagram.
+- Similarly, the sentence doesn't describe any specific use cases or scenarios where the tables are used, so it's not directly applicable to a Use Case Diagram.
+- The phrase ""free form description"" implies that these descriptions might be related to how tables interact with their environment (e.g., being near a fountain) or how they're managed in an activity. This suggests that this information could be useful for describing the activities or processes involved with using or interacting with tables, making it relevant to an Activity Diagram."
+52,"Each table is classified as a 2 - person , 4 - person or 6 - person table .","With that additional information, I can re-evaluate the sentences to determine their usefulness for each type of diagram.
+
+Here are my revised verdicts:
+
+1. ""AP : As a case progresses , I need to record all the individuals and organizations that participate in the case activities and the specific role they play .""
+Verdict: Useful Class Diagram (as it describes a class or entity), Not Useful Use Case Diagram, Not Useful Activity Diagram
+
+2. ""Unless you are a celebrity or a good friend of Romano you will need a reservation .""
+Verdict: Useful Class Diagram (as it describes a class or entity, specifically the concept of reservations), Useful Use Case Diagram, Not Useful Activity Diagram
+
+3. ""Therefore , there can be overlapping table reservations .""
+Verdict: Useful Class Diagram (as it describes a class or entity, specifically the concept of table reservations and overlaps), Not Useful Use Case Diagram, Not Useful Activity Diagram
+
+4. ""These samples are sometimes sub-divided and distributed to multiple research teams or labs for different specialized observations .""
+Verdict: Not Useful Class Diagram, Useful Use Case Diagram (as it describes a use case, such as distributing samples to researchers), Useful Activity Diagram (as it describes an activity, such as the distribution process)
+
+5. ""When the reservation party arrives at Romano 's the reservation is assigned to one waiter .""
+Verdict: Useful Class Diagram (as it describes a class or entity, specifically the concept of reservations and waiters), Useful Use Case Diagram, Not Useful Activity Diagram
+
+6. ""Yes , we do have customers rent two or more vehicles at the same time .""
+Verdict: Useful Class Diagram (as it describes a class or entity, specifically the concept of vehicle rentals), Useful Use Case Diagram, Not Useful Activity Diagram
+
+7. ""Geological samples are retrieved from the field and then processed in the laboratory to determine various properties , including chemistry , mineralogy , age , and petrophysical properties like density , porosity , permeability .""
+Verdict: Useful Class Diagram (as it describes a class or entity, specifically the concept of geological samples), Not Useful Use Case Diagram, Useful Activity Diagram
+
+8. ""For a hygienist 's appointment , preparation could be as simple as seating the patient in dental chair and putting a bib around his or her neck .""
+Verdict: Not Useful Class Diagram, Not Useful Use Case Diagram, Useful Activity Diagram (as it describes an activity, such as preparing for a hygienist's appointment)
+
+9. ""AP : Actually , that is a constant source of confusion and pain .""
+Verdict: Not Useful Class Diagram, Not Useful Use Case Diagram, Not Useful Activity Diagram
+
+10. ""Romano tends to overbook tables .""
+Verdict: Not Useful Class Diagram, Useful Use Case Diagram (as it describes a potential use case, such as handling overbooking), Not Useful Activity Diagram"
+53,"When a reservation is made , Romano associates a specific number to the reservation .","[Not Useful Class Diagram, Useful Use Case Diagram, Not Useful Activity Diagram]"
+54,A table can be utilized many times over the evening by many reservations .,"[Not Useful Class Diagram, Useful Use Case, Not Useful Activity]"
+55,Romano tends to overbook tables .,"Not Useful for Class Diagram
+Useful for Use Case Diagram
+Not Useful for Activity Diagram"
+56,"Therefore , there can be overlapping table reservations .","Verdict: 
+[Not Useful Class Diagram, Not Useful Use Case Diagram, Not Useful Activity Diagram]"
+57,The management structure at Romano 's is hierarchical .,"[Not Useful for Class Diagram, Not Useful for Use Case Diagram, Useful for Activity Diagram]"
+58,There are several restaurant managers who report to Romano .,"[Not Useful Class, Not Useful Use Case, Useful Activity]"
+59,The managers are responsible for managing the Maitre'd and the chefs as well as ensuring that the guests have a pleasant dining experience .,"[Useful Class, Useful Use Case, Not Useful Activity]
+
+Reasoning:
+- The sentence mentions specific roles (Maitre'd and chefs) which can be used to create classes in the class diagram.
+- It also mentions a responsibility of the managers (ensuring that the guests have a pleasant dining experience), but this is more related to the use case as it describes an external interaction or requirement between the system (managers, Maitre'd, and chefs) and its stakeholders (guests).
+- There's no information about a sequence of activities or actions that would be required to fulfill the responsibility, which is what an activity diagram would typically show."
+60,"The Maitre'd is responsible for managing the waiters , bartenders and bus personnel .","Verdict: Not Useful for Class Diagram, Not Useful for Use Case Diagram, Useful for Activity Diagram. 
+
+Explanation: The sentence describes a role or responsibility of an Maitre'd, which can be represented as an activity in the Activity Diagram, showing the tasks involved in managing others. However, it doesn't describe a class or object in the problem domain, so it's not useful for Class Diagram. Similarly, it doesn't define a specific use case that involves the Maitre'd, so it's not useful for Use Case Diagram."
+61,The Chefs are responsible for managing the cooks and dishwashers .,"[Not Useful Class Diagram, Not Useful Use Case, Useful Activity]"
+62,"Each person working for Romano 's must be classified as either a manager , Maitre'd , waiter , bartender , chef , cook , bus person or dishwasher .","[Useful Class Diagram, Useful Use Case Diagram, Not Useful Activity Diagram]
+
+Explanation: 
+
+- The sentence mentions people in the context of ""each person working for Romano's"", which implies a group of individuals with different roles. This suggests that this information would be represented as classes in a class diagram.
+
+- The sentence can also suggest different use cases or scenarios where these people are involved, such as an order being taken by the Maitre'd, food being served by a waiter, etc., implying that their roles can be used to create different use cases.
+
+- The sentence does not describe any activities or actions performed by individuals within the group. It only mentions roles. Therefore, this information would not be useful for creating an activity diagram."
+63,"Additional information maintained by Romano 's for each person includes the persons name , date of birth and drivers license number .","Based on the additional information, I would classify it as:
+
+[Useful Class: Customer, Useful Use Case: Make Reservation, Not Useful Activity]
+
+Explanation:
+- The sentence describes specific attributes maintained by Romano's (customer's name, date of birth, and driver's license number) which can be used to create a class diagram representing the ""Customer"" entity.
+- While this information is relevant for understanding the data structure, it doesn't directly describe an activity or process. However, if we consider the activity of making a reservation, this information would be useful in understanding the attributes of a customer who makes a reservation.
+- The sentence does not provide information about any activities or processes, so it's not directly useful for creating an Activity Diagram."
+64,When the reservation party arrives at Romano 's the reservation is assigned to one waiter .,"Verdict: 
+[Useful Class, Useful Use Case, Not Useful Activity]
+= [Romano's Reservation System Class, Romano's Reservation System Use Case, Not Useful for Activity Diagram]"
+65,"A waiter can be assigned to many reservations during the course of the evening "" .","[Not Useful Class Diagram, Useful Use Case Diagram, Not Useful Activity Diagram]"
+66,The menu at Romano 's is exquisite .,"[Not Useful Class, Not Useful Use Case, Not Useful Activity]"
+67,There are many exciting and exotic items .,"[Not Useful Class, Not Useful Use Case, Not Useful Activity]"
+68,Each menu item is identified by a unique menu item number .,"Verdict: Useful for Class Diagram, Not Useful for Use Case Diagram, Not Useful for Activity Diagram"
+69,"Information maintained by Romano 's for each menu item includes an item description of ( e.g. "" chicken marsala "" , "" fish soup "" , "" endive salad"",""1988 Merlot wine "" , etc . ) , and item prep time .","[Not Useful Class Diagram, Useful Use Case, Not Useful Activity]"
+70,"Each menu item is classified by Romano 's as "" appetizer "" , "" entree "" , "" dessert "" or "" beverage "" .","[Not Useful Class Diagram, Useful Use Case, Not Useful Activity]"
+71,The price of each menu item can vary based on the time of day .,"[Not Useful Class Diagram, Useful Use Case, Not Useful Activity]"
+72,"For example , some of the menu items have different lunch and dinner prices .","Verdict: [Not Useful Class Diagram, Useful Use Case Diagram, Not Useful Activity Diagram]"
+73,Some of the menu items change prices for happy hour .,"[Not Useful Class, Useful Use Case, Not Useful Activity]"
+74,"In order to calculate the check at the end of the dinner , the waiter maintains a list , by reservation number , of the menu items ordered and the time that the menu item was ordered .","[Not Useful Class Diagram, Useful Use Case, Not Useful Activity]"
+75,"In other words , each reservation can be associated with many menu items and a menu item can be associated with many reservations .","Verdict: Useful Class Diagram, Useful Use Case Diagram, Not Useful Activity Diagram."
+76,"In addition to menu items , Romano 's maintains a list of the food items that are utilized by the restaurant such as chicken , mushrooms , bread sticks , red sauce , cream sauce , etc .","Verdict: [Not Useful Class, Useful Use Case, Not Useful Activity]"
+77,Food items are utilized in the preparation of menu items .,"[Not Useful Class, Not Useful Use Case, Useful Activity]"
+78,Each food item is identified by a unique food item number .,"[Useful Class, Useful Use Case, Not Useful Activity]"
+79,The Right - Way Rental Truck Company rents small moving trucks and trailers for local and one - way usage .,"[Not Useful Class Diagram, Useful Use Case Diagram, Not Useful Activity Diagram]"
+80,We have 347 rental offices across the western United States .,"[Not Useful Class, Not Useful Use Case, Not Useful Activity]"
+81,"Our rental stock includes a total of 5,78 vehicles including various types of trucks and trailers .","[Not Useful Class Diagram, Useful Use Case Diagram, Not Useful Activity Diagram]"
+82,We need to implement a system to track our rental agreements and our vehicle assignments .,"[Useful Class, Useful Use Case, Not Useful Activity]
+
+This sentence can be used to support information to create Class Diagram. For example, ""Rental Agreement"", ""Vehicle Assignment"" etc.
+
+It can also be useful for Use Case Diagram, as it outlines the functionality of a system that tracks rental agreements and vehicle assignments, such as booking, assigning vehicles, and managing payments.
+
+However, this sentence may not be particularly useful for Activity Diagram, as it does not describe specific steps or actions taken by the system."
+83,Each rental office rents vehicles that they have in stock to customers ready to take possession of the vehicle .,"[Not Useful Class Diagram, Useful Use Case Diagram, Useful Activity Diagram]"
+84,"We do n’t take reservations , or speculate on when the customer will return rented vehicles .","[Not Useful Class Diagram, Not Useful Use Case, Useful Activity]"
+85,"The central office oversees the vehicle distribution , and directs transfers of vehicles from one rental office to another .","[Not Useful Class Diagram, Useful Use Case, Not Useful Activity]"
+86,Each rental office has an office name like “ Littleton Right - Way ” .,"[Not Useful Class Diagram, Useful Use Case Diagram, Not Useful Activity Diagram]"
+87,Each office also has a unique three digit office number .,"[Not Useful Class, Useful Use Case, Not Useful Activity]"
+88,We also keep each office ’s address .,"Verdict: [Not Useful Class, Not Useful Use Case, Useful Activity]"
+89,"Each office is a home office for some of our vehicles , and each vehicle is based out of a single home office .","[Not Useful Class Diagram, Useful Use Case, Not Useful Activity]"
+90,"Each vehicle has a vehicle i d , state of registration , and a license plate registration number .","[Not Useful Class, Useful Use Case, Not Useful Activity]"
+91,"We have five different types of vehicles : 36 trucks , 24 ’ trucks , 10 ’ trucks , 8 ’ covered trailers , and 6 ’ open trailers .","[Not Useful for Class Diagram, Not Useful for Use Case Diagram, Useful for Activity Diagram]
+
+Explanation:
+- The sentence does not describe a class in the context of UML (Unified Modeling Language) as it doesn't contain information about properties or characteristics that define a type of vehicle.
+- It also doesn't describe a use case, which is an interaction between a system and its external actors. 
+- However, the sentence can be used to describe an activity related to vehicles, like ""loading cargo into open trailers"" or ""maneuvering covered trailers""."
+92,"Yes , we do have a vehicle type code .","[Not Useful Class Diagram, Useful Use Case Diagram, Not Useful Activity Diagram]"
+93,"For all our vehicles , we need to track the last maintenance date , and expiration date of its registration .","[Useful Class Diagram, Useful Use Case Diagram, Not Useful Activity Diagram]
+
+Explanation:
+The sentence mentions tracking specific dates related to vehicle maintenance and registration, which suggests that there is a need to store this information in a database or system. This indicates that the concept of a class (e.g., Vehicle) exists, and it has attributes (last maintenance date and expiration date of registration). Therefore, it's useful for both Class Diagram and Use Case Diagram.
+
+However, tracking these dates does not imply any specific activities or operations being performed on the vehicles at a particular point in time. It's more about data storage and management than about describing activities or workflows related to vehicle maintenance or use cases. Hence, it's not useful for Activity Diagram."
+94,"For our trucks , we need to know the current odometer reading , the gas tank capacity , and whether or not it has a working radio .","[Not Useful for Class Diagram, Useful for Use Case Diagram, Not Useful for Activity Diagram]
+
+Explanation:
+- The sentence does not describe any class properties (attributes), so it's not useful for a Class Diagram.
+- It describes the requirements or needs of ""our trucks"" which can be seen as a Use Case, specifically to ensure that trucks meet certain criteria before being used/ purchased.
+- It doesn't describe an activity or process, so it's not useful for an Activity Diagram."
+95,"For long moves , customers really prefer a radio .","[Not Useful Class, Not Useful Use Case, Not Useful Activity]"
+96,"We log the current mileage just before we rent a truck , and then again when it is returned .","[Not Useful Class Diagram, Useful Use Case, Not Useful Activity]"
+97,"Most of our rental agreements are for individual customers , but a rental agreement can either be for an individual or for a company .","[Not Useful Class Diagram, Useful Use Case, Not Useful Activity]"
+98,We do rent a small percentage of our trucks to companies .,"[Not Useful Class, Useful Use Case, Not Useful Activity]"
+99,We assign each company an identifying company number and track the company ’s name and address .,"[Not Useful Class, Useful Use Case, Not Useful Activity]"
+100,"No , we do n’t need to worry about any additional information about a company .","Verdict: Useful for Class Diagram, Not Useful for Use Case Diagram, Not Useful for Activity Diagram"
+101,Our corporate sales group handles all that information separately .,"[Not Useful Class Diagram, Useful Use Case, Not Useful Activity]"
+102,"For each individual customer , we record the customer ’s name , home phone , address , and driver ’s license state , number , and expiration date .","Verdict: [Not Useful Class Diagram, Not Useful Use Case, Useful Activity Diagram]"
+103,We like to keep track of all our customers .,"[Useful Class, Useful Use Case, Not Useful Activity]"
+104,"If a customer damaged a vehicle , abandoned it , or did n’t fully pay the bill , then we tag the customer as a poor risk , and wo n’t rent to that customer again .","[Not Useful for Class Diagram, Useful for Use Case Diagram, Not Useful for Activity Diagram]"
+105,"We only allow a single individual or company for a given rental agreement , and we write a separate rental agreement for each vehicle .","[Not Useful Class Diagram, Useful Use Case, Useful Activity]"
+106,"Yes , we do have customers rent two or more vehicles at the same time .","[Not Useful for Class Diagram, Useful for Use Case Diagram, Not Useful for Activity Diagram]"
+107,Each rental agreement is identified by the originating rental office number and a rental agreement number .,"[Not Useful Class, Useful Use Case, Not Useful Activity]"
+108,"We also need to track the rental date , the anticipated duration of the rental , the originating rental office , the drop - off rental office , the amount of the deposit paid , the quoted daily rental rate , and the quoted rate per mile .","Based on the sentence, I would classify it as:
+
+[Not Useful Class Diagram, Not Useful Use Case, Useful Activity]
+
+Here's why:
+
+* The sentence describes various attributes or characteristics of a rental (rental date, duration, offices, deposit, etc.), which are not typically represented by classes in a class diagram. Classes usually represent entities or concepts with inherent properties.
+* The sentence doesn't describe a specific use case, as it focuses on the attributes and characteristics of rentals rather than a specific scenario or interaction.
+* The sentence does provide information that could be used to illustrate an activity related to renting vehicles (e.g., processing rental information, handling deposits, etc.), which aligns with the concept of an Activity Diagram.
+
+Note that this classification assumes that the sentence is describing the attributes and characteristics of rentals in a general sense. If the sentence were to describe a specific use case or scenario involving rentals (e.g., ""A customer rents a vehicle for 3 days from office A, pays $100 deposit""), it would be more suitable for an Use Case Diagram."
+109,"Of course for the trailers , there is n’t a mileage charge .","[Not Useful Class Diagram, Not Useful Use Case, Useful Activity]"
+110,"No , we do n’t need to automate the financial side of our business , just our rental agreement tracking and vehicle assignment functions .","[Not Useful Class Diagram, Useful Use Case Diagram, Not Useful Activity Diagram]"
+111,"Geological samples are retrieved from the field and then processed in the laboratory to determine various properties , including chemistry , mineralogy , age , and petrophysical properties like density , porosity , permeability .","[Not Useful for Class Diagram, Useful for Use Case Diagram, Useful for Activity Diagram]"
+112,"Samples obtained as part of economic activities , such as mineral exploration , are usually processed in commercial assay and chemistry labs .","[Not Useful Class Diagram, Useful Use Case, Not Useful Activity]"
+113,"For QA / QC purposes , each batch of samples will have a number of control samples inserted , for which the concentration of particular chemical species are already known .","Verdict: 
+[Not Useful Class Diagram, Useful Use Case Diagram, Useful Activity Diagram]
+
+Explanation:
+- This sentence does not provide information about classes or their relationships.
+- It mentions ""batch"" and ""samples"", suggesting it could be related to a use case.
+- The idea of inserting control samples and knowing the concentration of specific chemical species implies an activity (e.g., testing or analysis) that is part of a larger process."
+114,"For confidentiality reasons the location information associated with each sample is not provided to the lab , but must be re - attached during the interpretation phase .","[Not Useful for Class Diagram, Useful for Use Case Diagram, Useful for Activity Diagram]"
+115,"During processing , many derived samples will be generated by various physical and chemical procedures .","[Not Useful Class, Useful Use Case, Not Useful Activity]"
+116,"In some cases the derived samples are strict sub - samples , whose intensive properties are intended to be the same as the parent .","Verdict: 
+
+[Not Useful Class Diagram, Useful Use Case Diagram, Useful Activity Diagram]"
+117,"In other cases , the split is ' biased ' , with the derived sample intended to select a specific sub - sample , defined by a particular particle size , density , magnetic properties , etc .","Verdict: [Not Useful Class Diagram, Useful Use Case Diagram, Not Useful Activity Diagram]"
+118,"The link from the derived sample to the parent sample must be preserved , and the link from the parent to the location from which it was obtained also .","Verdict: Useful for Class Diagram, Not Useful for Use Case Diagram, Not Useful for Activity Diagram"
+119,"In some cases the location is associated with another sampling artifact , such as a drill - hole or traverse or cruise , with the latter carrying the detailed location information .","[Not Useful Class Diagram, Useful Use Case, Not Useful Activity]"
+120,"In a research context some samples have a particularly high - value , having been obtained by an expensive process ( involving drilling or ships or spacecraft ) or from a location that is hard to visit ( remote , offshore , in space ) .","[Not Useful Class Diagram, Not Useful Use Case, Useful Activity]"
+121,These samples are sometimes sub - divided and distributed to multiple research teams or labs for different specialized observations .,"Not Useful for Class Diagram, Useful for Use Case Diagram, Useful for Activity Diagram."
+122,"Each lab will run its own LIMS system , which will usually assign a local identifier for the sample .","[Not Useful Class Diagram, Useful Use Case Diagram, Useful Activity Diagram]"
+123,"When the results of these observations are reported , it is necessary that observations from different labs can be correlated with each other , so that the complete picture around each sample can be assembled .","[Not Useful Class Diagram, Useful Use Case Diagram, Useful Activity Diagram]"
+124,"These stories focus on sensing applications involving ex - situ sampling , where a location is visited and a specimen obtained using some sampling process , then transported to one or more laboratories where it is processed into one or more sub - samples and various observations made .","Verdict: 
+Useful Class Diagram, Not Useful Use Case Diagram, Useful Activity Diagram."
+125,"Sample identity is usually key , and the relationships between samples , between samples and other artifacts of the sampling process , and also with other geographic features or locations .","[Not Useful for Class Diagram, Useful for Use Case Diagram, Not Useful for Activity Diagram]"
+126,The sampling time and analysis and reporting time are all different .,"[Not Useful Class Diagram, Useful Use Case, Not Useful Activity]"
+127,"Similar process apply to botanical sampling , and to environmental sampling ( water , air , dust ) .","Here are the classifications for sentences related to Botanical Sampling and Environmental Sampling:
+
+**Botanical Sampling**
+
+1. ""We need to carefully collect and preserve plant samples to ensure accurate identification.""
+Verdict: Useful for Class Diagram, Not Useful for Use Case Diagram, Useful for Activity Diagram
+2. ""Only registered botanists can participate in the plant sampling expedition.""
+Verdict: Useful for Class Diagram, Useful for Use Case Diagram, Not Useful for Activity Diagram
+3. ""The botanical team will focus on collecting leaf samples from various tree species to analyze their chemical composition.""
+Verdict: Useful for Class Diagram, Not Useful for Use Case Diagram, Useful for Activity Diagram
+
+**Environmental Sampling (Water)**
+
+1. ""We collect water samples from different sources to monitor water quality and detect pollutants.""
+Verdict: Useful for Class Diagram, Not Useful for Use Case Diagram, Useful for Activity Diagram
+2. ""Only trained personnel can handle the hazardous materials used in water sampling equipment.""
+Verdict: Useful for Class Diagram, Useful for Use Case Diagram, Not Useful for Activity Diagram
+
+**Environmental Sampling (Air)**
+
+1. ""Air samples are collected using specialized equipment to measure particulate matter and gas emissions.""
+Verdict: Useful for Class Diagram, Not Useful for Use Case Diagram, Useful for Activity Diagram
+2. ""The air sampling team will deploy instruments to monitor CO2 levels in industrial areas.""
+Verdict: Useful for Class Diagram, Not Useful for Use Case Diagram, Useful for Activity Diagram
+
+**Environmental Sampling (Dust)**
+
+1. ""Dust samples are collected using vacuum equipment to analyze their composition and properties.""
+Verdict: Useful for Class Diagram, Not Useful for Use Case Diagram, Useful for Activity Diagram
+2. ""Only trained professionals can handle the dust sampling instruments to ensure accurate results.""
+Verdict: Useful for Class Diagram, Useful for Use Case Diagram, Not Useful for Activity Diagram
+
+Note that these classifications are similar to those used for Botanical Sampling and Environmental Sampling (Water), with some variations in specific details."
+128,"The clinic basically schedules patients , provides services for them , and bills them for those services .","[Not Useful Class Diagram, Useful Use Case Diagram, Useful Activity Diagram]
+
+Explanation:
+- The sentence does not provide information about the structure or organization of entities in the system (which is what a class diagram represents), so it's not useful for that.
+- It describes a key function of the clinic (scheduling patients and providing services) which can be represented as a use case, making it useful for use case diagrams.
+- The sentence also touches upon a specific activity or process within the clinic (billing patients for services), which can be depicted in an activity diagram."
+129,"New patients fill out a form listing their name , address , telephone numbers , allergies , and state of mind prior to scheduling their first appointment .","[Not Useful Class Diagram, Useful Use Case, Not Useful Activity]"
+130,Existing patients are normally scheduled for their next appointment as they depart from their current appointment .,"[Not Useful Class, Useful Use Case, Not Useful Activity]"
+131,"When the office staff forget to do this , a desk worker has to call the patient to set up a date .","[Not Useful Class Diagram, Useful Use Case, Not Useful Activity]"
+132,Schedules are entered into a central appointment book ; patient records ( including contact information ) are kept in paper files .,"Verdict: 
+[Not Useful Class Diagram, Not Useful Use Case, Useful Activity Diagram]"
+133,"Appointments are for one of three procedures : dental hygiene , cavities and fillings , and oral surgery ( including root canals and tooth extractions ) .","[Not Useful Class Diagram, Useful Use Case, Useful Activity]"
+134,"For each procedure the patient needs to be prepared and supplies need to be collected ( e.g. , probes , drill bits , cements , resins , etc . ) .","Verdict: 
+[Not Useful Class Diagram, Useful Use Case, Useful Activity]"
+135,"For a hygienist 's appointment , preparation could be as simple as seating the patient in dental chair and putting a bib around his or her neck .","[Not Useful for Class Diagram, Not Useful for Use Case Diagram, Useful for Activity Diagram]"
+136,"For oral surgery , anesthesia of various strengths are normally administered prior to operation .","[Not Useful Class Diagram, Useful Use Case, Not Useful Activity]"
+137,Only for oral surgery procedures is it necessary to ask the patient to wait for up to twenty minutes before performing a post - operative check .,"[Not Useful Class Diagram, Not Useful Use Case, Not Useful Activity]"
+138,"Billing is always done by the month , and bills are always sent by mail to patients ' contact addresses .","[Not Useful Class Diagram, Not Useful Use Case, Useful Activity]"
+139,Checks are received by mail .,"Verdict: 
+
+[Not Useful Class, Useful Use Case, Not Useful Activity]"
+140,HMO - funded patients are asked to make a copayment at the time that they leave the office .,"[Not Useful Class Diagram, Useful Use Case Diagram, Not Useful Activity Diagram]"
+141,Each patient also generates a reimbursement request to an insurance company .,"[Not Useful Class, Useful Use Case, Useful Activity]"
+142,Insurance companies and HMOs send their checks by mail three months after receiving a reimbursement request .,"[Not Useful Class Diagram, Not Useful Use Case, Not Useful Activity]"
+143,The clinic maintains a supplies inventory file that a worker fills out once a week by physically inspecting each of the three procedures rooms .,"[Not Useful Class Diagram, Not Useful Use Case, Useful Activity Diagram]
+
+Explanation: 
+This sentence describes an activity or process (physical inspection) rather than defining a class, use case, or relationship between classes. It does not provide information about entities, attributes, or interactions that would be relevant to creating a class diagram or use case diagram. However, it could be used as the description of an activity in an Activity Diagram to show the physical inspection process."
+144,Supplies and tools are stored in a standard layout in each room .,"[Not Useful Class Diagram, Useful Use Case, Not Useful Activity]"
