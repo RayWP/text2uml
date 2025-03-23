@@ -1,0 +1,25 @@
+digraph "classes" {
+rankdir=BT
+charset="utf-8"
+"codeku.AlimentationProducts" [color="black", fontcolor="black", label=<{AlimentationProducts|<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"codeku.ButcherProducts" [color="black", fontcolor="black", label=<{ButcherProducts|<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"codeku.Cashier" [color="black", fontcolor="black", label=<{Cashier|<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"codeku.ColdChamber" [color="black", fontcolor="black", label=<{ColdChamber|products : list<br ALIGN="LEFT"/>|store_in_chamber(product: Product)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"codeku.Customer" [color="black", fontcolor="black", label=<{Customer|customer_type : str<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"codeku.Freezer" [color="black", fontcolor="black", label=<{Freezer|products : list<br ALIGN="LEFT"/>|add_to_freezer(product: Product)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"codeku.Fridge" [color="black", fontcolor="black", label=<{Fridge|products : list<br ALIGN="LEFT"/>|add_to_fridge(product: Product)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"codeku.Items" [color="black", fontcolor="black", label=<{Items|products : list<br ALIGN="LEFT"/>|add_item(product: Product)<br ALIGN="LEFT"/>calculate_total()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"codeku.PastryBakery" [color="black", fontcolor="black", label=<{PastryBakery|<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"codeku.Payment" [color="black", fontcolor="black", label=<{Payment|payment_type : str<br ALIGN="LEFT"/>total : float<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"codeku.Person" [color="black", fontcolor="black", label=<{Person|name : str<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"codeku.Product" [color="black", fontcolor="black", label=<{Product|expiration_date : str<br ALIGN="LEFT"/>group : str<br ALIGN="LEFT"/>name : str<br ALIGN="LEFT"/>type : str<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"codeku.Shelf" [color="black", fontcolor="black", label=<{Shelf|products : list<br ALIGN="LEFT"/>|add_to_shelf(product: Product)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"codeku.Stock" [color="black", fontcolor="black", label=<{Stock|products : list<br ALIGN="LEFT"/>|record_product(product: Product)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"codeku.Supermarket" [color="black", fontcolor="black", label=<{Supermarket|cashiers : list<br ALIGN="LEFT"/>customers : list<br ALIGN="LEFT"/>name : str<br ALIGN="LEFT"/>shelves : list<br ALIGN="LEFT"/>stock<br ALIGN="LEFT"/>|add_cashier(cashier: Cashier)<br ALIGN="LEFT"/>add_customer(customer: Customer)<br ALIGN="LEFT"/>add_shelf(shelf: Shelf)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"codeku.AlimentationProducts" -> "codeku.Product" [arrowhead="empty", arrowtail="none"];
+"codeku.ButcherProducts" -> "codeku.Product" [arrowhead="empty", arrowtail="none"];
+"codeku.Cashier" -> "codeku.Person" [arrowhead="empty", arrowtail="none"];
+"codeku.Customer" -> "codeku.Person" [arrowhead="empty", arrowtail="none"];
+"codeku.PastryBakery" -> "codeku.Product" [arrowhead="empty", arrowtail="none"];
+"codeku.Stock" -> "codeku.Supermarket" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="stock", style="solid"];
+}
