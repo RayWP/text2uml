@@ -29,3 +29,7 @@ Next to the code for the preprocessing class that can be found in the `run_pipel
 
 ## running the original code by text2uml
 1. run `python run_pipeline.py` to run the original code by text2uml or check "Full pipeline.ipynb" for a more detailed guide
+
+# whats new, extended by github.com.raywp
+## reformated dataset
+CHeck data/CD-extraction and data/Req-Classify, it was transformed from train-full and validation-full.tsv using iob_dataset_transformer.ipynb and classification_dataset_transformer.ipynb
