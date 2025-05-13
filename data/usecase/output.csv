@@ -1,0 +1,3 @@
+tokens,tags
+"['The', 'system', 'shall', 'retain', 'existing', 'HIPAA', 'compliance', 'capabilities', '.']","[0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"['The', 'system', 'shall', 'follow', 'HIPAA', 'compliance', 'capabilities', 'in', 'new', 'functionality', 'introduced', 'to', 'the', 'system', '.']","[0, 1, 2, 0, 0, 0, 3, 4, 0, 0, 0, 0, 0, 0, 0]"
